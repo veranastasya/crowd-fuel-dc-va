@@ -55,16 +55,16 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 animate-spin-slow z-[5]" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
             
             {/* Central hub with enhanced glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 z-20">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse-glow" />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-xl opacity-50 animate-pulse-glow" />
-              <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl shadow-primary/50">
-                <Network className="w-12 h-12 md:w-16 md:h-16 text-primary-foreground animate-pulse-icon" strokeWidth={1.5} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-28 md:h-28 z-[15]" style={{ isolation: 'isolate' }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse-glow opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-lg opacity-30 animate-pulse-glow" />
+              <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-xl shadow-primary/40">
+                <Network className="w-10 h-10 md:w-14 md:h-14 text-primary-foreground animate-pulse-icon" strokeWidth={1.5} />
               </div>
             </div>
             
             {/* Orbiting icons container with rotation */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-30">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-[25]" style={{ isolation: 'isolate' }}>
               {/* Icon 1 - 0° (Top) */}
               <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, -180px)', animationDelay: '0s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -131,7 +131,7 @@ const Hero = () => {
             </div>
             
             {/* Enhanced connecting lines with gradient and animation */}
-            <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
+            <svg className="absolute inset-0 w-full h-full z-[8]" style={{ isolation: 'isolate' }}>
               <defs>
                 <linearGradient id="line-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />

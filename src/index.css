@@ -164,34 +164,34 @@ All colors MUST be HSL.
   }
   
   .animate-float-smooth {
-    animation: float-smooth 4s ease-in-out infinite;
+    animation: float-smooth 3.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
   
   .animate-orbit {
-    animation: orbit 30s linear infinite;
+    animation: orbit 35s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
   
   .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: pulse-glow 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
   .animate-pulse-slow {
-    animation: pulse-slow 4s ease-in-out infinite;
+    animation: pulse-slow 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
   
   .animate-pulse-slower {
-    animation: pulse-slower 6s ease-in-out infinite;
+    animation: pulse-slower 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
   
   .animate-pulse-icon {
-    animation: pulse-icon 2s ease-in-out infinite;
+    animation: pulse-icon 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
   .animate-icon-pulse {
-    animation: icon-pulse 2s ease-in-out infinite;
+    animation: icon-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
   .animate-spin-slow {
-    animation: spin-slow 20s linear infinite;
+    animation: spin-slow 25s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
 }
