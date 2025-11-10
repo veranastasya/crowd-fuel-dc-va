@@ -5,12 +5,14 @@ const features = [
   {
     icon: Presentation,
     title: "Interactive Workshops and Webinars",
-    description: "Participate in regular sessions led by industry leaders on various topics, from scaling your business to mastering digital marketing.",
+    description:
+      "Participate in regular sessions led by industry leaders on various topics, from scaling your business to mastering digital marketing.",
   },
   {
     icon: Star,
     title: "Member Spotlights",
-    description: "Get featured and showcase your startup journey, insights, and success stories to inspire and be inspired.",
+    description:
+      "Get featured and showcase your startup journey, insights, and success stories to inspire and be inspired.",
   },
   {
     icon: Gift,
@@ -20,22 +22,20 @@ const features = [
   {
     icon: BookOpen,
     title: "Recommended Resources",
-    description: "Access cutting-edge tools, insights, and case studies tailored for the unique challenges and opportunities faced by founders.",
+    description:
+      "Access cutting-edge tools, insights, and case studies tailored for the unique challenges and opportunities faced by founders.",
   },
   {
     icon: Users,
     title: "Curated Networking",
-    description: "Connect with fellow founders who share your passion, area of interest, and drive for success. Meet the right people at the right time.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Mentorship Opportunities",
-    description: "Learn from those who've walked the path before. Members mentor each other to guide each other through their startup's growth phases.",
+    description:
+      "Connect with fellow founders who share your passion, area of interest, and drive for success. Meet the right people at the right time.",
   },
   {
     icon: TrendingUp,
     title: "Funding Possibilities",
-    description: "Learn about funding opportunities whether it's grants, government contracts, angel investors, venture capitalists, crowdfunding options and more.",
+    description:
+      "Learn about funding opportunities whether it's grants, government contracts, angel investors, venture capitalists, crowdfunding options and more.",
   },
 ];
 
@@ -54,8 +54,8 @@ const Features = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="p-6 bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
             >
               <div className="mb-4">
