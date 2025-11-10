@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
             
             {/* Orbiting icons container with rotation */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-30">
               {/* Icon 1 - 0° (Top) */}
               <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, -180px)', animationDelay: '0s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
