@@ -47,12 +47,12 @@ const Hero = () => {
 
           <div className="relative w-full max-w-md mx-auto h-[400px] md:h-[500px]">
             {/* Animated gradient background layers */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-3xl rounded-full animate-pulse-slow" />
-            <div className="absolute inset-0 bg-gradient-to-tl from-accent/10 via-primary/10 to-secondary/10 blur-2xl rounded-full animate-pulse-slower" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-3xl rounded-full animate-pulse-slow z-0" />
+            <div className="absolute inset-0 bg-gradient-to-tl from-accent/10 via-primary/10 to-secondary/10 blur-2xl rounded-full animate-pulse-slower z-0" />
             
             {/* Outer glow ring */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-primary/20 animate-spin-slow" style={{ animationDuration: '20s' }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 animate-spin-slow" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-primary/20 animate-spin-slow z-[5]" style={{ animationDuration: '20s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 animate-spin-slow z-[5]" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
             
             {/* Central hub with enhanced glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 z-20">
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
             
             {/* Orbiting icons container with rotation */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-10">
               {/* Icon 1 - 0° (Top) */}
               <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, -180px)', animationDelay: '0s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
