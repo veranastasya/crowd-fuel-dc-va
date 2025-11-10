@@ -45,6 +45,121 @@ const Hero = () => {
             </p>
           </div>
 
+          <div className="relative w-full max-w-md mx-auto h-[400px] md:h-[500px]">
+            {/* Static gradient background layers */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-3xl rounded-full z-0" />
+            <div className="absolute inset-0 bg-gradient-to-tl from-accent/10 via-primary/10 to-secondary/10 blur-2xl rounded-full z-0" />
+            
+            {/* Outer glow ring */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-primary/20 z-[5]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 z-[5]" />
+            
+            {/* Central hub with enhanced glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-28 md:h-28 z-[20]" style={{ isolation: 'isolate' }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse-glow opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-md opacity-60 animate-pulse-glow" />
+              <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-xl shadow-primary/40">
+                <Network className="w-10 h-10 md:w-14 md:h-14 text-primary-foreground" strokeWidth={1.5} />
+              </div>
+            </div>
+            
+            {/* Static icons container */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-[10]" style={{ isolation: 'isolate' }}>
+              {/* Icon 1 - 0° (Top) */}
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group" style={{ transform: 'translate(-50%, -50%) translate(0, -200px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                  <Rocket className="w-7 h-7 md:w-10 md:h-10 text-primary" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 2 - 45° (Top Right) */}
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(141px, -141px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                  <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 3 - 90° (Right) */}
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group" style={{ transform: 'translate(-50%, -50%) translate(200px, 0)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
+                  <Lightbulb className="w-7 h-7 md:w-9 md:h-9 text-accent" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 4 - 135° (Bottom Right) */}
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(141px, 141px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                  <Zap className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 5 - 180° (Bottom) */}
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group" style={{ transform: 'translate(-50%, -50%) translate(0, 200px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                  <Users className="w-7 h-7 md:w-10 md:h-10 text-secondary" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 6 - 225° (Bottom Left) */}
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(-141px, 141px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
+                  <Network className="w-6 h-6 md:w-8 md:h-8 text-accent" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 7 - 270° (Left) */}
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group" style={{ transform: 'translate(-50%, -50%) translate(-200px, 0)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                  <TrendingUp className="w-7 h-7 md:w-9 md:h-9 text-primary" strokeWidth={1.5} />
+                </div>
+              </div>
+              
+              {/* Icon 8 - 315° (Top Left) */}
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(-141px, -141px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                  <Rocket className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
+                </div>
+              </div>
+            </div>
+            
+            {/* Static connecting lines with gradient */}
+            <svg className="absolute inset-0 w-full h-full z-[5]" style={{ isolation: 'isolate' }}>
+              <defs>
+                <linearGradient id="line-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                </linearGradient>
+                <linearGradient id="line-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
+                  <stop offset="50%" stopColor="hsl(var(--secondary))" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.1" />
+                </linearGradient>
+                <linearGradient id="line-gradient-3" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.1" />
+                  <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.1" />
+                </linearGradient>
+              </defs>
+              
+              <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="url(#line-gradient-1)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="85.4%" y2="14.6%" stroke="url(#line-gradient-2)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="90%" y2="50%" stroke="url(#line-gradient-3)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="85.4%" y2="85.4%" stroke="url(#line-gradient-1)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="50%" y2="90%" stroke="url(#line-gradient-2)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="14.6%" y2="85.4%" stroke="url(#line-gradient-3)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="url(#line-gradient-1)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+              <line x1="50%" y1="50%" x2="14.6%" y2="14.6%" stroke="url(#line-gradient-2)" strokeWidth="2" strokeDasharray="4 4" opacity="0.4" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
