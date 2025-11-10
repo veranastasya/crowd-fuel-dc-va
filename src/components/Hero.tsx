@@ -45,82 +45,83 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="relative w-full max-w-md mx-auto h-[500px]">
+          <div className="relative w-full max-w-md mx-auto h-[400px] md:h-[500px]">
             {/* Background gradient blurs */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-3xl rounded-full animate-pulse" />
             
             {/* Central hub */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl shadow-primary/50 animate-pulse z-20">
-              <Network className="w-16 h-16 text-primary-foreground" strokeWidth={1.5} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl shadow-primary/50 animate-pulse z-20">
+              <Network className="w-12 h-12 md:w-16 md:h-16 text-primary-foreground" strokeWidth={1.5} />
             </div>
             
-            {/* Orbiting icons */}
+            {/* Orbiting icons in perfect circle - 8 icons at 45° intervals */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
-              {/* Icon 1 - Top */}
-              <div className="absolute top-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0s' }}>
-                <Rocket className="w-10 h-10 text-primary" strokeWidth={1.5} />
+              {/* Icon 1 - 0° (Top) */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0s' }}>
+                <Rocket className="w-7 h-7 md:w-10 md:h-10 text-primary" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 2 - Top Right */}
-              <div className="absolute top-20 right-8 w-16 h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
-                <TrendingUp className="w-8 h-8 text-secondary" strokeWidth={1.5} />
+              {/* Icon 2 - 45° (Top Right) */}
+              <div className="absolute top-[14.6%] right-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
+                <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 3 - Right */}
-              <div className="absolute top-1/2 -translate-y-1/2 right-4 w-18 h-18 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl animate-float p-3" style={{ animationDelay: '1s' }}>
-                <Lightbulb className="w-9 h-9 text-accent" strokeWidth={1.5} />
+              {/* Icon 3 - 90° (Right) */}
+              <div className="absolute top-1/2 -translate-y-1/2 right-0 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ animationDelay: '1s' }}>
+                <Lightbulb className="w-7 h-7 md:w-9 md:h-9 text-accent" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 4 - Bottom Right */}
-              <div className="absolute bottom-20 right-12 w-16 h-16 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '1.5s' }}>
-                <Zap className="w-8 h-8 text-primary" strokeWidth={1.5} />
+              {/* Icon 4 - 135° (Bottom Right) */}
+              <div className="absolute bottom-[14.6%] right-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '1.5s' }}>
+                <Zap className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 5 - Bottom */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-20 h-20 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2s' }}>
-                <Users className="w-10 h-10 text-secondary" strokeWidth={1.5} />
+              {/* Icon 5 - 180° (Bottom) */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2s' }}>
+                <Users className="w-7 h-7 md:w-10 md:h-10 text-secondary" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 6 - Bottom Left */}
-              <div className="absolute bottom-24 left-8 w-16 h-16 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2.5s' }}>
-                <Network className="w-8 h-8 text-accent" strokeWidth={1.5} />
+              {/* Icon 6 - 225° (Bottom Left) */}
+              <div className="absolute bottom-[14.6%] left-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2.5s' }}>
+                <Network className="w-6 h-6 md:w-8 md:h-8 text-accent" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 7 - Left */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-4 w-18 h-18 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float p-3" style={{ animationDelay: '3s' }}>
-                <TrendingUp className="w-9 h-9 text-primary" strokeWidth={1.5} />
+              {/* Icon 7 - 270° (Left) */}
+              <div className="absolute top-1/2 -translate-y-1/2 left-0 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ animationDelay: '3s' }}>
+                <TrendingUp className="w-7 h-7 md:w-9 md:h-9 text-primary" strokeWidth={1.5} />
               </div>
               
-              {/* Icon 8 - Top Left */}
-              <div className="absolute top-16 left-12 w-16 h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '3.5s' }}>
-                <Rocket className="w-8 h-8 text-secondary" strokeWidth={1.5} />
+              {/* Icon 8 - 315° (Top Left) */}
+              <div className="absolute top-[14.6%] left-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '3.5s' }}>
+                <Rocket className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
               </div>
             </div>
             
-            {/* Connecting lines */}
+            {/* Connecting lines - perfectly symmetrical */}
             <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
-              <line x1="50%" y1="50%" x2="50%" y2="15%" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              {/* 8 lines from center to each icon at 45° intervals */}
+              <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="1s" repeatCount="indefinite" />
               </line>
-              <line x1="50%" y1="50%" x2="85%" y2="25%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              <line x1="50%" y1="50%" x2="85.4%" y2="14.6%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="1.2s" repeatCount="indefinite" />
               </line>
               <line x1="50%" y1="50%" x2="90%" y2="50%" stroke="hsl(var(--accent))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="1.4s" repeatCount="indefinite" />
               </line>
-              <line x1="50%" y1="50%" x2="80%" y2="75%" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              <line x1="50%" y1="50%" x2="85.4%" y2="85.4%" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="1.6s" repeatCount="indefinite" />
               </line>
-              <line x1="50%" y1="50%" x2="50%" y2="85%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              <line x1="50%" y1="50%" x2="50%" y2="90%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="1.8s" repeatCount="indefinite" />
               </line>
-              <line x1="50%" y1="50%" x2="20%" y2="80%" stroke="hsl(var(--accent))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              <line x1="50%" y1="50%" x2="14.6%" y2="85.4%" stroke="hsl(var(--accent))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="2s" repeatCount="indefinite" />
               </line>
               <line x1="50%" y1="50%" x2="10%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="2.2s" repeatCount="indefinite" />
               </line>
-              <line x1="50%" y1="50%" x2="20%" y2="25%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
+              <line x1="50%" y1="50%" x2="14.6%" y2="14.6%" stroke="hsl(var(--secondary))" strokeWidth="1" opacity="0.3" strokeDasharray="4 4">
                 <animate attributeName="stroke-dashoffset" from="0" to="8" dur="2.4s" repeatCount="indefinite" />
               </line>
             </svg>
