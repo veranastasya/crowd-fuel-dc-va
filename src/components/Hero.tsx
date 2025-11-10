@@ -56,43 +56,43 @@ const Hero = () => {
             
             {/* Orbiting icons in perfect circle - 8 icons at 45° intervals */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
-              {/* Icon 1 - 0° (Top) */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0s' }}>
+              {/* Icon 1 - 0° (Top) - using transform for perfect circular positioning */}
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(0, -180px)', animationDelay: '0s' }}>
                 <Rocket className="w-7 h-7 md:w-10 md:h-10 text-primary" strokeWidth={1.5} />
               </div>
               
               {/* Icon 2 - 45° (Top Right) */}
-              <div className="absolute top-[14.6%] right-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(127px, -127px)', animationDelay: '0.5s' }}>
                 <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
               </div>
               
               {/* Icon 3 - 90° (Right) */}
-              <div className="absolute top-1/2 -translate-y-1/2 right-0 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ transform: 'translate(-50%, -50%) translate(180px, 0)', animationDelay: '1s' }}>
                 <Lightbulb className="w-7 h-7 md:w-9 md:h-9 text-accent" strokeWidth={1.5} />
               </div>
               
               {/* Icon 4 - 135° (Bottom Right) */}
-              <div className="absolute bottom-[14.6%] right-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(127px, 127px)', animationDelay: '1.5s' }}>
                 <Zap className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={1.5} />
               </div>
               
               {/* Icon 5 - 180° (Bottom) */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(0, 180px)', animationDelay: '2s' }}>
                 <Users className="w-7 h-7 md:w-10 md:h-10 text-secondary" strokeWidth={1.5} />
               </div>
               
               {/* Icon 6 - 225° (Bottom Left) */}
-              <div className="absolute bottom-[14.6%] left-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '2.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(-127px, 127px)', animationDelay: '2.5s' }}>
                 <Network className="w-6 h-6 md:w-8 md:h-8 text-accent" strokeWidth={1.5} />
               </div>
               
               {/* Icon 7 - 270° (Left) */}
-              <div className="absolute top-1/2 -translate-y-1/2 left-0 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ animationDelay: '3s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 bg-card border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl p-2 md:p-3 animate-float" style={{ transform: 'translate(-50%, -50%) translate(-180px, 0)', animationDelay: '3s' }}>
                 <TrendingUp className="w-7 h-7 md:w-9 md:h-9 text-primary" strokeWidth={1.5} />
               </div>
               
               {/* Icon 8 - 315° (Top Left) */}
-              <div className="absolute top-[14.6%] left-[14.6%] w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ animationDelay: '3.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 bg-card border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl animate-float" style={{ transform: 'translate(-50%, -50%) translate(-127px, -127px)', animationDelay: '3.5s' }}>
                 <Rocket className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
               </div>
             </div>
