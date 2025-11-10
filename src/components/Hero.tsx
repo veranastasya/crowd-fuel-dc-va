@@ -1,10 +1,10 @@
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import crowdfuelLogo from "@/assets/crowdfuel-logo.png";
+import networkHero from "@/assets/network-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center py-20 px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center py-20 px-4 overflow-hidden mt-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%),radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.1),transparent_50%)]" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -34,8 +34,10 @@ const Hero = () => {
               <Button size="lg" className="text-lg font-semibold bg-primary hover:bg-primary/90">
                 Join the Newsletter
               </Button>
-              <Button size="lg" variant="outline" className="text-lg font-semibold border-primary text-primary hover:bg-primary/10">
-                Connect on LinkedIn
+              <Button size="lg" variant="outline" className="text-lg font-semibold border-primary text-primary hover:bg-primary/10" asChild>
+                <a href="https://www.linkedin.com/company/104932081" target="_blank" rel="noopener noreferrer">
+                  Connect on LinkedIn
+                </a>
               </Button>
             </div>
 
@@ -47,9 +49,9 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-brand opacity-20 blur-3xl rounded-full" />
             <img 
-              src={crowdfuelLogo} 
-              alt="CrowdFuel Logo" 
-              className="relative z-10 w-full max-w-md mx-auto drop-shadow-2xl"
+              src={networkHero} 
+              alt="Network of connected founders and entrepreneurs" 
+              className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl"
             />
           </div>
         </div>
