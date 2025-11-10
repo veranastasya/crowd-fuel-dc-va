@@ -55,83 +55,83 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 animate-spin-slow z-[5]" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
             
             {/* Central hub with enhanced glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-28 md:h-28 z-[15]" style={{ isolation: 'isolate' }}>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-28 md:h-28 z-[20]" style={{ isolation: 'isolate' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse-glow opacity-80" />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-lg opacity-30 animate-pulse-glow" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-md opacity-60 animate-pulse-glow" />
               <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-xl shadow-primary/40">
                 <Network className="w-10 h-10 md:w-14 md:h-14 text-primary-foreground animate-pulse-icon" strokeWidth={1.5} />
               </div>
             </div>
             
             {/* Orbiting icons container with rotation */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-[25]" style={{ isolation: 'isolate' }}>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full animate-orbit z-[10]" style={{ isolation: 'isolate' }}>
               {/* Icon 1 - 0° (Top) */}
-              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, -180px)', animationDelay: '0s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, -200px)', animationDelay: '0s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
                   <Rocket className="w-7 h-7 md:w-10 md:h-10 text-primary animate-icon-pulse" strokeWidth={1.5} />
                 </div>
               </div>
               
               {/* Icon 2 - 45° (Top Right) */}
-              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(127px, -127px)', animationDelay: '0.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(141px, -141px)', animationDelay: '0.5s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
                   <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '0.2s' }} />
                 </div>
               </div>
               
               {/* Icon 3 - 90° (Right) */}
-              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(180px, 0)', animationDelay: '1s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(200px, 0)', animationDelay: '1s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
                   <Lightbulb className="w-7 h-7 md:w-9 md:h-9 text-accent animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '0.4s' }} />
                 </div>
               </div>
               
               {/* Icon 4 - 135° (Bottom Right) */}
-              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(127px, 127px)', animationDelay: '1.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(141px, 141px)', animationDelay: '1.5s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
                   <Zap className="w-6 h-6 md:w-8 md:h-8 text-primary animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '0.6s' }} />
                 </div>
               </div>
               
               {/* Icon 5 - 180° (Bottom) */}
-              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, 180px)', animationDelay: '2s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(0, 200px)', animationDelay: '2s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
                   <Users className="w-7 h-7 md:w-10 md:h-10 text-secondary animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '0.8s' }} />
                 </div>
               </div>
               
               {/* Icon 6 - 225° (Bottom Left) */}
-              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-127px, 127px)', animationDelay: '2.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-141px, 141px)', animationDelay: '2.5s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/50 to-accent/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-accent/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-accent/50 transition-all duration-300 hover:scale-110">
                   <Network className="w-6 h-6 md:w-8 md:h-8 text-accent animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '1s' }} />
                 </div>
               </div>
               
               {/* Icon 7 - 270° (Left) */}
-              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-180px, 0)', animationDelay: '3s' }}>
+              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-18 md:h-18 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-200px, 0)', animationDelay: '3s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
                   <TrendingUp className="w-7 h-7 md:w-9 md:h-9 text-primary animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '1.2s' }} />
                 </div>
               </div>
               
               {/* Icon 8 - 315° (Top Left) */}
-              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-127px, -127px)', animationDelay: '3.5s' }}>
+              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group animate-float-smooth" style={{ transform: 'translate(-50%, -50%) translate(-141px, -141px)', animationDelay: '3.5s' }}>
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-sm border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
                   <Rocket className="w-6 h-6 md:w-8 md:h-8 text-secondary animate-icon-pulse" strokeWidth={1.5} style={{ animationDelay: '1.4s' }} />
                 </div>
               </div>
             </div>
             
             {/* Enhanced connecting lines with gradient and animation */}
-            <svg className="absolute inset-0 w-full h-full z-[8]" style={{ isolation: 'isolate' }}>
+            <svg className="absolute inset-0 w-full h-full z-[5]" style={{ isolation: 'isolate' }}>
               <defs>
                 <linearGradient id="line-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />

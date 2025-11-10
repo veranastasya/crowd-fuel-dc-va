@@ -168,7 +168,7 @@ All colors MUST be HSL.
   }
   
   .animate-orbit {
-    animation: orbit 35s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+    animation: orbit 40s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   }
   
   .animate-pulse-glow {
