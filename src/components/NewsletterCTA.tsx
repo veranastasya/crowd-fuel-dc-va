@@ -20,7 +20,7 @@ const NewsletterCTA = () => {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section id="newsletter" className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="relative overflow-hidden rounded-2xl bg-gradient-brand p-1">
           <div className="bg-card rounded-xl p-8 md:p-12">
