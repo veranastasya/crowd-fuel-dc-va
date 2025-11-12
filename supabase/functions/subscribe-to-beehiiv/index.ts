@@ -64,6 +64,7 @@ const handler = async (req: Request): Promise<Response> => {
           email: email.trim(),
           reactivate_existing: false,
           send_welcome_email: true,
+          double_opt_override: true,
           utm_source: 'website',
           utm_medium: 'newsletter_form'
         })
