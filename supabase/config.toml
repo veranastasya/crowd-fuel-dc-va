@@ -1,1 +1,4 @@
 project_id = "iisojquufdkuasywqgnb"
+
+[functions.subscribe-to-beehiiv]
+verify_jwt = false

@@ -3,19 +3,40 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import crowdfuelLogo from "@/assets/crowdfuel-logo.png";
+import { supabase } from "@/integrations/supabase/client";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('subscribe-to-beehiiv', {
+        body: { email }
+      });
+
+      if (error) throw error;
+
       toast({
         title: "Subscribed to updates!",
-        description: "You'll receive our latest news and updates.",
+        description: "Check your inbox for a welcome email from CrowdFuel.",
       });
       setEmail("");
+    } catch (error: any) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Subscription failed",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -44,8 +65,12 @@ const Footer = () => {
                 required
                 className="flex-1 bg-background border-border"
               />
-              <Button type="submit" className="bg-primary hover:bg-primary/90">
-                Subscribe
+              <Button 
+                type="submit" 
+                className="bg-primary hover:bg-primary/90"
+                disabled={isLoading}
+              >
+                {isLoading ? "Subscribing..." : "Subscribe"}
               </Button>
             </form>
           </div>
