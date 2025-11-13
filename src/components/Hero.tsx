@@ -1,7 +1,48 @@
+import { useState } from "react";
 import { Users, TrendingUp, Lightbulb, Rocket, Network, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('subscribe-to-beehiiv', {
+        body: { email }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "🎉 You're in!",
+        description: "Welcome to CrowdFuel! Check your inbox for a welcome email from us.",
+      });
+      setEmail("");
+      setIsOpen(false);
+    } catch (error: any) {
+      console.error('Subscription error:', error);
+      toast({
+        title: "Oops! Something went wrong",
+        description: "Please try again in a moment.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center py-20 px-4 overflow-hidden mt-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%),radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.1),transparent_50%)]" />
@@ -30,9 +71,40 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg font-semibold bg-primary hover:bg-primary/90">
-                Join the Newsletter
-              </Button>
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogTrigger asChild>
+                  <Button size="lg" className="text-lg font-semibold bg-primary hover:bg-primary/90">
+                    Join the Newsletter
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold">Join the CrowdFuel Community</DialogTitle>
+                    <DialogDescription>
+                      Get exclusive insights, event invitations, and founder resources delivered to your inbox.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                    <div className="space-y-2">
+                      <Input
+                        type="email"
+                        placeholder="your.email@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="w-full"
+                      />
+                    </div>
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-primary hover:bg-primary/90 font-semibold"
+                      disabled={isLoading}
+                    >
+                      {isLoading ? "Subscribing..." : "Subscribe"}
+                    </Button>
+                  </form>
+                </DialogContent>
+              </Dialog>
               <Button size="lg" variant="outline" className="text-lg font-semibold border-primary text-primary hover:bg-primary/10" asChild>
                 <a href="https://www.linkedin.com/company/104932081" target="_blank" rel="noopener noreferrer">
                   Connect on LinkedIn
