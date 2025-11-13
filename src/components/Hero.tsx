@@ -44,19 +44,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 px-4 overflow-hidden mt-20">
+    <section className="relative min-h-[calc(100vh-4rem)] md:min-h-screen flex items-center py-12 sm:py-16 md:py-20 px-4 overflow-hidden mt-16 md:mt-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%),radial-gradient(circle_at_70%_50%,rgba(168,85,247,0.1),transparent_50%)]" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border">
-              <Users className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium">Join 500+ Founders</span>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-card border border-border">
+              <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
+              <span className="text-xs sm:text-sm font-medium">Join 500+ Founders</span>
             </div>
 
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Welcome to
                 <br />
                 <span className="bg-gradient-brand bg-clip-text text-transparent">
@@ -65,15 +65,15 @@ const Hero = () => {
                 <br />
                 Founders Club
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
                 A startup founders club across DC and Northern Virginia built to help startup founders grow their businesses.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="text-lg font-semibold bg-primary hover:bg-primary/90">
+                  <Button size="lg" className="text-lg font-semibold bg-primary hover:bg-primary/90 w-full sm:w-auto">
                     Join the Newsletter
                   </Button>
                 </DialogTrigger>
@@ -105,7 +105,7 @@ const Hero = () => {
                   </form>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" variant="outline" className="text-lg font-semibold border-primary text-primary hover:bg-primary/10" asChild>
+              <Button size="lg" variant="outline" className="text-lg font-semibold border-primary text-primary hover:bg-primary/10 w-full sm:w-auto" asChild>
                 <a href="https://www.linkedin.com/company/104932081" target="_blank" rel="noopener noreferrer">
                   Connect on LinkedIn
                 </a>
@@ -117,39 +117,39 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="relative w-full max-w-md mx-auto h-[400px] md:h-[500px]">
+          <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-md mx-auto h-[280px] sm:h-[340px] md:h-[500px]">
             {/* Static gradient background layers */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-3xl rounded-full z-0" />
-            <div className="absolute inset-0 bg-gradient-to-tl from-accent/10 via-primary/10 to-secondary/10 blur-2xl rounded-full z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 blur-2xl sm:blur-3xl rounded-full z-0" />
+            <div className="absolute inset-0 bg-gradient-to-tl from-accent/10 via-primary/10 to-secondary/10 blur-xl sm:blur-2xl rounded-full z-0" />
             
-            {/* Outer glow ring */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full border border-primary/20 z-[5]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-secondary/20 z-[5]" />
+            {/* Outer glow ring - scaled for mobile */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] rounded-full border border-primary/20 z-[5]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] rounded-full border border-secondary/20 z-[5]" />
             
-            {/* Central hub with enhanced glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-28 md:h-28 z-[20]" style={{ isolation: 'isolate' }}>
+            {/* Central hub with enhanced glow - responsive sizing */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 z-[20]" style={{ isolation: 'isolate' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full animate-pulse-glow opacity-80" />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-md opacity-60 animate-pulse-glow" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-sm sm:blur-md opacity-60 animate-pulse-glow" />
               <div className="relative w-full h-full bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-xl shadow-primary/40">
-                <Network className="w-10 h-10 md:w-14 md:h-14 text-primary-foreground" strokeWidth={1.5} />
+                <Network className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 text-primary-foreground" strokeWidth={1.5} />
               </div>
             </div>
             
             {/* Static icons container */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-[10]" style={{ isolation: 'isolate' }}>
-              {/* Icon 1 - 0° (Top) */}
-              <div className="absolute top-1/2 left-1/2 w-14 h-14 md:w-20 md:h-20 group" style={{ transform: 'translate(-50%, -50%) translate(0, -200px)' }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-primary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
-                  <Rocket className="w-7 h-7 md:w-10 md:h-10 text-primary" strokeWidth={1.5} />
+              {/* Icon 1 - 0° (Top) - scaled positioning for mobile */}
+              <div className="absolute top-1/2 left-1/2 w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 group" style={{ transform: 'translate(-50%, -50%) translate(0, -110px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-primary/20 rounded-xl md:rounded-2xl blur-sm md:blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border border-primary/50 md:border-2 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg md:shadow-xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110">
+                  <Rocket className="w-5 h-5 sm:w-6 sm:h-6 md:w-10 md:h-10 text-primary" strokeWidth={1.5} />
                 </div>
               </div>
               
-              {/* Icon 2 - 45° (Top Right) */}
-              <div className="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(141px, -141px)' }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border-2 border-secondary/50 rounded-2xl flex items-center justify-center shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
-                  <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
+              {/* Icon 2 - 45° (Top Right) - scaled positioning */}
+              <div className="absolute top-1/2 left-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 group" style={{ transform: 'translate(-50%, -50%) translate(78px, -78px)' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-secondary/20 rounded-xl md:rounded-2xl blur-sm md:blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-full h-full bg-card/80 backdrop-blur-md border border-secondary/50 md:border-2 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg md:shadow-xl hover:shadow-secondary/50 transition-all duration-300 hover:scale-110">
+                  <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 md:w-8 md:h-8 text-secondary" strokeWidth={1.5} />
                 </div>
               </div>
               
