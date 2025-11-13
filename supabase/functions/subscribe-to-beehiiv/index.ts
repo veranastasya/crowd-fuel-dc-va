@@ -93,7 +93,7 @@ const handler = async (req: Request): Promise<Response> => {
       try {
         const resend = new Resend(resendApiKey);
         const welcomeEmail = await resend.emails.send({
-          from: 'CrowdFuel <hello@resend.dev>',
+          from: 'CrowdFuel <hello@crowdfuel.co>',
           to: [email.trim()],
           subject: 'Welcome to CrowdFuel Founders Club! 🚀',
           html: `
