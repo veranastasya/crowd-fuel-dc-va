@@ -22,7 +22,7 @@ const FeaturedEvent = () => {
               </div>
               <div className="flex items-center gap-2 text-sm bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="font-medium">DC Area</span>
+                <span className="font-medium">NoVA</span>
               </div>
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-3">
