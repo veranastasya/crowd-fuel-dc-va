@@ -36,6 +36,12 @@ const Header = () => {
               >
                 Join the Club
               </button>
+              <button 
+                onClick={() => scrollToSection('event')}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                Event
+              </button>
             </div>
           </div>
 
