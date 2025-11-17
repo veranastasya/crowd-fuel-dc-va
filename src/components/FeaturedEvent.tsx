@@ -12,7 +12,7 @@ const FeaturedEvent = () => {
         <div className="flex justify-center">
           <iframe
             src="https://luma.com/embed/event/evt-hyi4h2QrRbeErVv/simple"
-            className="w-full h-[450px] md:h-[600px] rounded border border-border"
+            className="w-full h-[800px] md:h-[900px] rounded border border-border"
             style={{ border: "1px solid #bfcbda88", borderRadius: "4px" }}
             allow="fullscreen; payment"
             aria-hidden="false"
