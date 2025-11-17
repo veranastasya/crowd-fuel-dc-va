@@ -1,8 +1,3 @@
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import eventImage from "@/assets/crowdfuel-networking-event.jpg";
-
 const FeaturedEvent = () => {
   return (
     <section id="event" className="py-20 px-4 bg-muted/30">
@@ -14,49 +9,16 @@ const FeaturedEvent = () => {
           </p>
         </div>
 
-        <Card className="max-w-4xl mx-auto overflow-hidden border-2 hover:border-primary/50 transition-all duration-300">
-          <div className="relative h-64 md:h-80 overflow-hidden">
-            <img 
-              src={eventImage} 
-              alt="CrowdFuel Networking Event" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-          </div>
-          <CardHeader className="bg-gradient-to-br from-primary/10 via-primary/5 to-background pb-8 -mt-20 relative z-10">
-            <div className="flex flex-wrap gap-4 mb-6">
-              <div className="flex items-center gap-2 text-sm bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span className="font-medium">Wednesday, Dec 10</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="font-medium">NoVA</span>
-              </div>
-            </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-3">
-              CrowdFuel December Networking
-            </h3>
-          </CardHeader>
-          
-          <CardContent className="pt-6">
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              We're so back! Join us for an exciting evening of networking and insights at the December edition of CrowdFuel, a startup founders club in the DC area built to help startup founders grow their businesses.
-            </p>
-            
-            <Button asChild size="lg" className="w-full md:w-auto group">
-              <a 
-                href="https://lu.ma/igo1jy90" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="gap-2"
-              >
-                Register on Luma
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </CardContent>
-        </Card>
+        <div className="max-w-4xl mx-auto flex justify-center">
+          <iframe
+            src="https://luma.com/embed/event/evt-hyi4h2QrRbeErVv/simple"
+            className="w-full max-w-[600px] h-[450px] rounded border border-border"
+            style={{ border: "1px solid #bfcbda88", borderRadius: "4px" }}
+            allow="fullscreen; payment"
+            aria-hidden="false"
+            tabIndex={0}
+          />
+        </div>
       </div>
     </section>
   );
