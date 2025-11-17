@@ -1,6 +1,7 @@
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import eventImage from "@/assets/crowdfuel-networking-event.jpg";
 
 const FeaturedEvent = () => {
   return (
@@ -14,7 +15,15 @@ const FeaturedEvent = () => {
         </div>
 
         <Card className="max-w-4xl mx-auto overflow-hidden border-2 hover:border-primary/50 transition-all duration-300">
-          <CardHeader className="bg-gradient-to-br from-primary/10 via-primary/5 to-background pb-8">
+          <div className="relative h-64 md:h-80 overflow-hidden">
+            <img 
+              src={eventImage} 
+              alt="CrowdFuel Networking Event" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          </div>
+          <CardHeader className="bg-gradient-to-br from-primary/10 via-primary/5 to-background pb-8 -mt-20 relative z-10">
             <div className="flex flex-wrap gap-4 mb-6">
               <div className="flex items-center gap-2 text-sm bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full border">
                 <Calendar className="w-4 h-4 text-primary" />
